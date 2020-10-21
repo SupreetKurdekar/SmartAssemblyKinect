@@ -4,6 +4,8 @@
 ################################################################################
 import cv2
 import numpy as np
+import time
+
 import utils_PyKinectV2 as utils
 from pykinect2.PyKinectV2 import *
 from pykinect2 import PyKinectV2
@@ -14,7 +16,7 @@ from visionUtils import click_event
 import visionUtils
 
 #########################
-imagePath = "C:\\Users\\Supreet\\VisionSystem\\base"
+imagePath = "C:\\Users\\Supreet\\VisionSystem\\completeAssemblyTopViewFullImages"
 img_counter = 0
 #############################
 ### Kinect runtime object ###
@@ -23,6 +25,10 @@ kinect = PyKinectRuntime.PyKinectRuntime(PyKinectV2.FrameSourceTypes_Color)
 
 depth_width, depth_height = kinect.depth_frame_desc.Width, kinect.depth_frame_desc.Height # Default: 512, 424
 color_width, color_height = kinect.color_frame_desc.Width, kinect.color_frame_desc.Height # Default: 1920, 1080
+
+gamma = 0.5
+invGamma = 1.0 / gamma
+table = np.array([((i / 255.0) ** invGamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
 
 while True:
     ##############################
@@ -41,6 +47,12 @@ while True:
         ### Display 2D images using OpenCV ###
         ######################################
         color_img_resize = cv2.resize(color_img, (0,0), fx=1, fy=1) # Resize (1080, 1920, 4) into half (540, 960, 4)
+        color_img_resize = cv2.resize(color_img, (0,0), fx=1, fy=1) # Resize (1080, 1920, 4) into half (540, 960, 4)
+        color_img_resize = cv2.flip(color_img_resize,0)
+
+        color_img_resize = cv2.LUT(color_img_resize, table)
+        # color_img_resize = visionUtils.gamma_correction(color_img_resize,gamma)
+
         # Use Flip code 0 to flip vertically 
         # color_img_resize = cv2.flip(color_img_resize, 1)
         # depth_colormap   = cv2.applyColorMap(cv2.convertScaleAbs(depth_img, alpha=255/1500), cv2.COLORMAP_JET) # Scale to display from 0 mm to 1500 mm
