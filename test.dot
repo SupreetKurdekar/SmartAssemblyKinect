@@ -1,0 +1,144 @@
+strict graph "" {
+	ABCDE	[level=5,
+		parts="{'B', 'E', 'D', 'A', 'C'}"];
+	ABCD	[level=4,
+		parts="{'B', 'A', 'C', 'D'}"];
+	ABCDE -- ABCD;
+	ABCE	[level=4,
+		parts="{'B', 'A', 'C', 'E'}"];
+	ABCDE -- ABCE;
+	ABDE	[level=4,
+		parts="{'B', 'A', 'E', 'D'}"];
+	ABCDE -- ABDE;
+	ACDE	[level=4,
+		parts="{'A', 'C', 'E', 'D'}"];
+	ABCDE -- ACDE;
+	BCDE	[level=4,
+		parts="{'B', 'C', 'E', 'D'}"];
+	ABCDE -- BCDE;
+	ABC	[level=3,
+		parts="{'B', 'A', 'C'}"];
+	ABCDE -- ABC;
+	ABE	[level=3,
+		parts="{'B', 'A', 'E'}"];
+	ABCDE -- ABE;
+	ADE	[level=3,
+		parts="{'A', 'E', 'D'}"];
+	ABCDE -- ADE;
+	BCD	[level=3,
+		parts="{'B', 'C', 'D'}"];
+	ABCDE -- BCD;
+	CDE	[level=3,
+		parts="{'C', 'E', 'D'}"];
+	ABCDE -- CDE;
+	AB	[level=2,
+		parts="{'B', 'A'}"];
+	ABCDE -- AB;
+	AE	[level=2,
+		parts="{'A', 'E'}"];
+	ABCDE -- AE;
+	BC	[level=2,
+		parts="{'B', 'C'}"];
+	ABCDE -- BC;
+	CD	[level=2,
+		parts="{'C', 'D'}"];
+	ABCDE -- CD;
+	DE	[level=2,
+		parts="{'E', 'D'}"];
+	ABCDE -- DE;
+	A	[level=1,
+		parts="{'A'}"];
+	ABCDE -- A;
+	B	[level=1,
+		parts="{'B'}"];
+	ABCDE -- B;
+	C	[level=1,
+		parts="{'C'}"];
+	ABCDE -- C;
+	D	[level=1,
+		parts="{'D'}"];
+	ABCDE -- D;
+	E	[level=1,
+		parts="{'E'}"];
+	ABCDE -- E;
+	ABCD -- ABC;
+	ABCD -- BCD;
+	ABCD -- AB;
+	ABCD -- BC;
+	ABCD -- CD;
+	ABCD -- A;
+	ABCD -- B;
+	ABCD -- C;
+	ABCD -- D;
+	ABCE -- ABC;
+	ABCE -- ABE;
+	ABCE -- AB;
+	ABCE -- AE;
+	ABCE -- BC;
+	ABCE -- A;
+	ABCE -- B;
+	ABCE -- C;
+	ABCE -- E;
+	ABDE -- ABE;
+	ABDE -- ADE;
+	ABDE -- AB;
+	ABDE -- AE;
+	ABDE -- DE;
+	ABDE -- A;
+	ABDE -- B;
+	ABDE -- D;
+	ABDE -- E;
+	ACDE -- ADE;
+	ACDE -- CDE;
+	ACDE -- AE;
+	ACDE -- CD;
+	ACDE -- DE;
+	ACDE -- A;
+	ACDE -- C;
+	ACDE -- D;
+	ACDE -- E;
+	BCDE -- BCD;
+	BCDE -- CDE;
+	BCDE -- BC;
+	BCDE -- CD;
+	BCDE -- DE;
+	BCDE -- B;
+	BCDE -- C;
+	BCDE -- D;
+	BCDE -- E;
+	ABC -- AB;
+	ABC -- BC;
+	ABC -- A;
+	ABC -- B;
+	ABC -- C;
+	ABE -- AB;
+	ABE -- AE;
+	ABE -- A;
+	ABE -- B;
+	ABE -- E;
+	ADE -- AE;
+	ADE -- DE;
+	ADE -- A;
+	ADE -- D;
+	ADE -- E;
+	BCD -- BC;
+	BCD -- CD;
+	BCD -- B;
+	BCD -- C;
+	BCD -- D;
+	CDE -- CD;
+	CDE -- DE;
+	CDE -- C;
+	CDE -- D;
+	CDE -- E;
+	AB -- A;
+	AB -- B;
+	AE -- A;
+	AE -- E;
+	BC -- B;
+	BC -- C;
+	CD -- C;
+	CD -- D;
+	DE -- D;
+	DE -- E;
+}

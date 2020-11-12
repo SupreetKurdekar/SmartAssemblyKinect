@@ -44,7 +44,7 @@ while True:
         ######################################
         ### Display 2D images using OpenCV ###
         ######################################
-        color_img_resize = cv2.resize(color_img, (0,0), fx=0.5, fy=0.5) # Resize (1080, 1920, 4) into half (540, 960, 4)
+        color_img_resize = cv2.resize(color_img, (0,0), fx=1, fy=1) # Resize (1080, 1920, 4) into half (540, 960, 4)
         # depth_colormap   = cv2.applyColorMap(cv2.convertScaleAbs(depth_img, alpha=255/1500), cv2.COLORMAP_JET) # Scale to display from 0 mm to 1500 mm
         # infrared_img     = cv2.convertScaleAbs(infrared_img, alpha=255/65535) # Scale from uint16 to uint8
         

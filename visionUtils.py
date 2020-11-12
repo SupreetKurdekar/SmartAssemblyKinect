@@ -97,3 +97,59 @@ def adjust_gamma(image, gamma=1.0):
       for i in np.arange(0, 256)]).astype("uint8")
 
    return cv2.LUT(image, table)
+
+# Utils for ORB Feature matching
+
+""" Clear matches for which NN ratio is > than threshold """
+def filter_distance(matches):
+    dist = [m.distance for m in matches]
+    thres_dist = (sum(dist) / len(dist)) * ratio
+
+    sel_matches = [m for m in matches if m.distance < thres_dist]
+    #print '#selected matches:%d (out of %d)' % (len(sel_matches), len(matches))
+    return sel_matches
+
+""" keep only symmetric matches """
+def filter_asymmetric(matches, matches2, k_scene, k_ftr):
+    sel_matches = []
+    for match1 in matches:
+        for match2 in matches2:
+            if match1.queryIdx < len(k_ftr) and match2.queryIdx < len(k_scene) and \
+                match2.trainIdx < len(k_ftr) and match1.trainIdx < len(k_scene) and \
+                            k_ftr[match1.queryIdx] == k_ftr[match2.trainIdx] and \
+                            k_scene[match1.trainIdx] == k_scene[match2.queryIdx]:
+                sel_matches.append(match1)
+                break
+    return sel_matches
+
+def filter_ransac(matches, kp_scene, kp_ftr, countIterations=2):
+    if countIterations < 1 or len(kp_scene) < minimalCountForHomography:
+        return matches
+
+    p_scene = []
+    p_ftr = []
+    for m in matches:
+        p_scene.append(kp_scene[m.queryIdx].pt)
+        p_ftr.append(kp_ftr[m.trainIdx].pt)
+
+    if len(p_scene) < minimalCountForHomography:
+        return None
+
+    F, mask = cv2.findFundamentalMat(np.float32(p_ftr), np.float32(p_scene), cv2.FM_RANSAC)
+    sel_matches = []
+    for m, status in zip(matches, mask):
+        if status:
+            sel_matches.append(m)
+
+    #print '#ransac selected matches:%d (out of %d)' % (len(sel_matches), len(matches))
+
+    return filter_ransac(sel_matches, kp_scene, kp_ftr, countIterations-1)
+
+
+
+def filter_matches(matches, matches2, k_scene, k_ftr):
+    matches = filter_distance(matches)
+    matches2 = filter_distance(matches2)
+    matchesSym = filter_asymmetric(matches, matches2, k_scene, k_ftr)
+    if len(k_scene) >= minimalCountForHomography:
+        return filter_ransac(matchesSym, k_scene, k_ftr)

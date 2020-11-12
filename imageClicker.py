@@ -16,8 +16,8 @@ from visionUtils import click_event
 import visionUtils
 
 #########################
-imagePath = "C:\\Users\\Supreet\\VisionSystem\\completeAssemblyTopViewFullImages"
-img_counter = 0
+imagePath = "C:\\Users\\Supreet\\VisionSystem\\ObjDetData"
+img_counter = 2
 #############################
 ### Kinect runtime object ###
 #############################
@@ -26,7 +26,7 @@ kinect = PyKinectRuntime.PyKinectRuntime(PyKinectV2.FrameSourceTypes_Color)
 depth_width, depth_height = kinect.depth_frame_desc.Width, kinect.depth_frame_desc.Height # Default: 512, 424
 color_width, color_height = kinect.color_frame_desc.Width, kinect.color_frame_desc.Height # Default: 1920, 1080
 
-gamma = 0.5
+gamma = 0.4
 invGamma = 1.0 / gamma
 table = np.array([((i / 255.0) ** invGamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
 
