@@ -16,8 +16,8 @@ from visionUtils import click_event
 import visionUtils
 
 #########################
-imagePath = "C:\\Users\\Supreet\\VisionSystem\\ObjDetData"
-img_counter = 2
+imagePath = "C:\\Users\\Supreet\\VisionSystem\\KInectCharucoCalibrationImages"
+img_counter = 0
 #############################
 ### Kinect runtime object ###
 #############################
@@ -46,9 +46,12 @@ while True:
         ######################################
         ### Display 2D images using OpenCV ###
         ######################################
-        color_img_resize = cv2.resize(color_img, (0,0), fx=1, fy=1) # Resize (1080, 1920, 4) into half (540, 960, 4)
-        color_img_resize = cv2.resize(color_img, (0,0), fx=1, fy=1) # Resize (1080, 1920, 4) into half (540, 960, 4)
-        color_img_resize = cv2.flip(color_img_resize,0)
+        # color_img_resize = cv2.resize(color_img, (0,0), fx=1, fy=1) # Resize (1080, 1920, 4) into half (540, 960, 4)
+
+        # resizing to size of depth image (424, 512)
+        color_img_resize = cv2.resize(color_img, (512, 424)) 
+
+        color_img_resize = cv2.flip(color_img_resize,1)
 
         color_img_resize = cv2.LUT(color_img_resize, table)
         # color_img_resize = visionUtils.gamma_correction(color_img_resize,gamma)
@@ -68,7 +71,7 @@ while True:
     if key==27: # Press esc to break the loop
         break
     elif key%256 == 32:
-        # SPACE pressed
+        # press SPACE to click image
         img_name = "{}.png".format(img_counter)
         path = os.path.join(imagePath,img_name)
         cv2.imwrite(path, color_img_resize)

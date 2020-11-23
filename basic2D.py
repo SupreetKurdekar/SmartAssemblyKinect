@@ -58,12 +58,15 @@ while True:
         color_img_resize = cv2.resize(color_img, (0,0), fx=0.5, fy=0.5) # Resize (1080, 1920, 4) into half (540, 960, 4)
         depth_colormap   = cv2.applyColorMap(cv2.convertScaleAbs(depth_img, alpha=255/1500), cv2.COLORMAP_JET) # Scale to display from 0 mm to 1500 mm
         infrared_img     = cv2.convertScaleAbs(infrared_img, alpha=255/65535) # Scale from uint16 to uint8
+        depth_color_overlay = utils.get_align_color_image(kinect, color_img, color_height=1080, color_width=1920, depth_height=424, depth_width=512)
+        
         
         cv2.imshow('body index', body_index_img)                    # (424, 512)
         cv2.imshow('color', color_img_resize)                       # (540, 960, 4)
         cv2.imshow('align color with body joints', align_color_img) # (424, 512)
         cv2.imshow('depth', depth_colormap)                         # (424, 512)
         cv2.imshow('infrared', infrared_img)                        # (424, 512)
+        cv2.imshow('depth_overlay', depth_color_overlay)
 
     key = cv2.waitKey(30)
     if key==27: # Press esc to break the loop

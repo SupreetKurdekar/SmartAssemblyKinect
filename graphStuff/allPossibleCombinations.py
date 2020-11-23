@@ -7,12 +7,14 @@ from networkx.drawing.nx_agraph import graphviz_layout
 
 # all ordering, storing and naming will be in lexicographic order
 
-parts = ["A","B","C","D","E"]
+parts = ["L","R","C","M","T","S","E"]
+feasible_edges = [("L","R"),("L","C"),("C","R"),("L","T"),("T","R"),("L","E"),("R","E"),("T","S"),("L","M"),("R","M")]
+
 
 # feasible fit graph
 # for ABCDE chain link system
 ff_graph = nx.Graph()
-ff_graph.add_edges_from([("A","B"),("B","C"),("C","D"),("D","E"),("A","E")])
+ff_graph.add_edges_from(feasible_edges)
 # nx.draw(ff_graph, with_labels=True, arrows=False)
 
 # parts = parts.sorted()
@@ -40,8 +42,11 @@ for level in reversed(list(hierarchy.keys())):
 G2 = nx.Graph()
 
 # convert all nodes to nodes with sets. 
+# add an attribute called anded_pairs
+# anded_pairs is a list of pairs of nodes which together form that node
 for node in G.nodes(data=True):
-    G2.add_node(node[0],parts = set(node[1]["parts"]),level = node[1]["level"])
+    G2.add_node(node[0],parts = set(node[1]["parts"]),level = node[1]["level"],anded_pairs = [])
+
 
 for level_num in range(1,max_level):
     # iterating through one level nodes in G2
@@ -53,6 +58,9 @@ for level_num in range(1,max_level):
                     # making edges if lower is subset of upper node
                     if node_data["parts"].issubset(upper_node_data["parts"]):
                         G2.add_edge(node_name,upper_node_name)
+                        # Each edge now has an trribute called anded which is currently set to False
+                        G2[node_name][upper_node_name]['anded']=False
+
 
 # remove the geometrically infeasible nodes
 to_be_removed = []
@@ -63,29 +71,27 @@ G2.remove_nodes_from(to_be_removed)
 
 # # go through each edge of each node and remove each edge that does not have a complement
 # # if complement is found store complement edge as anding edges
+edges_to_be_removed = []
 
-# for node_name,node_data in G2.nodes(data=True):
-#     for neighbour in G2.neighbors(node_name):
-        
-#         comp = node_data["parts"].difference(G2.nodes[neighbour]["parts"])
+for node_name,node_data in G2.nodes(data=True):
+    for neighbour in G2.neighbors(node_name):
+        if G2.nodes[neighbour]["level"] < node_data["level"]:
+            anded_pair = []
+            comp = node_data["parts"].difference(G2.nodes[neighbour]["parts"])
+            comp_level = len(comp)
+            for neighbour_2 in G2.neighbors(node_name):
+                if (neighbour_2 != neighbour) and (comp_level == G2.nodes[neighbour_2]["level"]) and (comp == G2.nodes[neighbour_2]["parts"]):
+                    anded_pair.append(neighbour_2)
+                    break
+            if len(anded_pair)>0:
+                G2[node_name][neighbour]["anded"] = True
+                G2[node_name][anded_pair[0]]["anded"] = True
+                anded_pair.append(neighbour)
+                G2.nodes[node_name]['anded_pairs'].append(anded_pair)
+            else:
+                edges_to_be_removed.append((node_name,neighbour))
 
-#         print(comp)
-
-# for level_num in range(1,max_level):
-
-
-
-# # for level_num in range(1,max_level):
-# #     # iterating through one level nodes in G2
-# #     for node_name,node_data in G2.nodes(data=True):
-# #         if node_data['level']==level_num:
-# #             #iterating through all nodes above current level
-# #             for upper_node_name,upper_node_data in G2.nodes(data=True):
-# #                 if upper_node_data['level'] > level_num:
-# #                     # making edges if lower is subset of upper node
-# #                     if node_data["parts"].issubset(upper_node_data["parts"]):
-# #                         diff_set = upper_node_data["parts"].difference(node_data["parts"])
-                        
+G2.remove_edges_from(edges_to_be_removed)
 
 # write dot file to use with graphviz
 # run "dot -Tpng test.dot >test.png"

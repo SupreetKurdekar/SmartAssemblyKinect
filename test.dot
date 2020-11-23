@@ -1,144 +1,708 @@
 strict graph "" {
-	ABCDE	[level=5,
-		parts="{'B', 'E', 'D', 'A', 'C'}"];
-	ABCD	[level=4,
-		parts="{'B', 'A', 'C', 'D'}"];
-	ABCDE -- ABCD;
-	ABCE	[level=4,
-		parts="{'B', 'A', 'C', 'E'}"];
-	ABCDE -- ABCE;
-	ABDE	[level=4,
-		parts="{'B', 'A', 'E', 'D'}"];
-	ABCDE -- ABDE;
-	ACDE	[level=4,
-		parts="{'A', 'C', 'E', 'D'}"];
-	ABCDE -- ACDE;
-	BCDE	[level=4,
-		parts="{'B', 'C', 'E', 'D'}"];
-	ABCDE -- BCDE;
-	ABC	[level=3,
-		parts="{'B', 'A', 'C'}"];
-	ABCDE -- ABC;
-	ABE	[level=3,
-		parts="{'B', 'A', 'E'}"];
-	ABCDE -- ABE;
-	ADE	[level=3,
-		parts="{'A', 'E', 'D'}"];
-	ABCDE -- ADE;
-	BCD	[level=3,
-		parts="{'B', 'C', 'D'}"];
-	ABCDE -- BCD;
-	CDE	[level=3,
-		parts="{'C', 'E', 'D'}"];
-	ABCDE -- CDE;
-	AB	[level=2,
-		parts="{'B', 'A'}"];
-	ABCDE -- AB;
-	AE	[level=2,
-		parts="{'A', 'E'}"];
-	ABCDE -- AE;
-	BC	[level=2,
-		parts="{'B', 'C'}"];
-	ABCDE -- BC;
-	CD	[level=2,
-		parts="{'C', 'D'}"];
-	ABCDE -- CD;
-	DE	[level=2,
-		parts="{'E', 'D'}"];
-	ABCDE -- DE;
-	A	[level=1,
-		parts="{'A'}"];
-	ABCDE -- A;
-	B	[level=1,
-		parts="{'B'}"];
-	ABCDE -- B;
-	C	[level=1,
-		parts="{'C'}"];
-	ABCDE -- C;
-	D	[level=1,
-		parts="{'D'}"];
-	ABCDE -- D;
-	E	[level=1,
-		parts="{'E'}"];
-	ABCDE -- E;
-	ABCD -- ABC;
-	ABCD -- BCD;
-	ABCD -- AB;
-	ABCD -- BC;
-	ABCD -- CD;
-	ABCD -- A;
-	ABCD -- B;
-	ABCD -- C;
-	ABCD -- D;
-	ABCE -- ABC;
-	ABCE -- ABE;
-	ABCE -- AB;
-	ABCE -- AE;
-	ABCE -- BC;
-	ABCE -- A;
-	ABCE -- B;
-	ABCE -- C;
-	ABCE -- E;
-	ABDE -- ABE;
-	ABDE -- ADE;
-	ABDE -- AB;
-	ABDE -- AE;
-	ABDE -- DE;
-	ABDE -- A;
-	ABDE -- B;
-	ABDE -- D;
-	ABDE -- E;
-	ACDE -- ADE;
-	ACDE -- CDE;
-	ACDE -- AE;
-	ACDE -- CD;
-	ACDE -- DE;
-	ACDE -- A;
-	ACDE -- C;
-	ACDE -- D;
-	ACDE -- E;
-	BCDE -- BCD;
-	BCDE -- CDE;
-	BCDE -- BC;
-	BCDE -- CD;
-	BCDE -- DE;
-	BCDE -- B;
-	BCDE -- C;
-	BCDE -- D;
-	BCDE -- E;
-	ABC -- AB;
-	ABC -- BC;
-	ABC -- A;
-	ABC -- B;
-	ABC -- C;
-	ABE -- AB;
-	ABE -- AE;
-	ABE -- A;
-	ABE -- B;
-	ABE -- E;
-	ADE -- AE;
-	ADE -- DE;
-	ADE -- A;
-	ADE -- D;
-	ADE -- E;
-	BCD -- BC;
-	BCD -- CD;
-	BCD -- B;
-	BCD -- C;
-	BCD -- D;
-	CDE -- CD;
-	CDE -- DE;
-	CDE -- C;
-	CDE -- D;
-	CDE -- E;
-	AB -- A;
-	AB -- B;
-	AE -- A;
-	AE -- E;
-	BC -- B;
-	BC -- C;
-	CD -- C;
-	CD -- D;
-	DE -- D;
-	DE -- E;
+	FTcTpBmLTmS	[anded_pairs="[['FTpBmLTmS', 'Tc'], ['FTcBmLTmS', 'Tp'], ['FTcTpLTmS', 'Bm'], ['FTcTpBmTmS', 'L'], ['FTcTpBmLS', 'Tm'], ['FTcTpBmLTm', 'S'], ['\
+FTcTpTmS', 'BmL'], ['FTcTpLTm', 'BmS'], ['FTcTpBmS', 'LTm'], ['FTcTpBmL', 'TmS'], ['BmLTmS', 'FTcTp'], ['FTcTpTm', 'BmLS'], ['FTcTpBm', '\
+LTmS'], ['LTmS', 'FTcTpBm'], ['BmLS', 'FTcTpTm'], ['FTcTp', 'BmLTmS'], ['TmS', 'FTcTpBmL'], ['LTm', 'FTcTpBmS'], ['BmS', 'FTcTpLTm'], ['\
+BmL', 'FTcTpTmS'], ['S', 'FTcTpBmLTm'], ['Tm', 'FTcTpBmLS'], ['L', 'FTcTpBmTmS'], ['Bm', 'FTcTpLTmS'], ['Tp', 'FTcBmLTmS'], ['Tc', '\
+FTpBmLTmS']]",
+		level=7,
+		parts="{'Tm', 'L', 'F', 'Tp', 'Tc', 'S', 'Bm'}"];
+	FTcTpBmLTm	[anded_pairs="[['FTpBmLTm', 'Tc'], ['FTcBmLTm', 'Tp'], ['FTcTpLTm', 'Bm'], ['FTcTpBmTm', 'L'], ['FTcTpBmL', 'Tm'], ['FTcTpTm', 'BmL'], ['FTcTpBm', '\
+LTm'], ['BmLTm', 'FTcTp'], ['FTcTp', 'BmLTm'], ['LTm', 'FTcTpBm'], ['BmL', 'FTcTpTm'], ['Tm', 'FTcTpBmL'], ['L', 'FTcTpBmTm'], ['\
+Bm', 'FTcTpLTm'], ['Tp', 'FTcBmLTm'], ['Tc', 'FTpBmLTm']]",
+		level=6,
+		parts="{'Tm', 'L', 'F', 'Tp', 'Tc', 'Bm'}"];
+	FTcTpBmLTmS -- FTcTpBmLTm	[anded=True];
+	FTcTpBmLS	[anded_pairs="[['FTpBmLS', 'Tc'], ['FTcBmLS', 'Tp'], ['FTcTpBmS', 'L'], ['FTcTpBmL', 'S'], ['BmLS', 'FTcTp'], ['FTcTp', 'BmLS'], ['S', 'FTcTpBmL'], ['\
+L', 'FTcTpBmS'], ['Tp', 'FTcBmLS'], ['Tc', 'FTpBmLS']]",
+		level=6,
+		parts="{'L', 'F', 'Tp', 'Tc', 'S', 'Bm'}"];
+	FTcTpBmLTmS -- FTcTpBmLS	[anded=True];
+	FTcTpBmTmS	[anded_pairs="[['FTpBmTmS', 'Tc'], ['FTcBmTmS', 'Tp'], ['FTcTpTmS', 'Bm'], ['FTcTpBmS', 'Tm'], ['FTcTpBmTm', 'S'], ['FTcTpTm', 'BmS'], ['FTcTpBm', '\
+TmS'], ['BmTmS', 'FTcTp'], ['FTcTp', 'BmTmS'], ['TmS', 'FTcTpBm'], ['BmS', 'FTcTpTm'], ['S', 'FTcTpBmTm'], ['Tm', 'FTcTpBmS'], ['\
+Bm', 'FTcTpTmS'], ['Tp', 'FTcBmTmS'], ['Tc', 'FTpBmTmS']]",
+		level=6,
+		parts="{'Tm', 'F', 'Tp', 'Tc', 'S', 'Bm'}"];
+	FTcTpBmLTmS -- FTcTpBmTmS	[anded=True];
+	FTcTpLTmS	[anded_pairs="[['FTpLTmS', 'Tc'], ['FTcLTmS', 'Tp'], ['FTcTpTmS', 'L'], ['FTcTpLTm', 'S'], ['LTmS', 'FTcTp'], ['FTcTp', 'LTmS'], ['S', 'FTcTpLTm'], ['\
+L', 'FTcTpTmS'], ['Tp', 'FTcLTmS'], ['Tc', 'FTpLTmS']]",
+		level=6,
+		parts="{'Tm', 'L', 'F', 'Tp', 'Tc', 'S'}"];
+	FTcTpBmLTmS -- FTcTpLTmS	[anded=True];
+	FTcBmLTmS	[anded_pairs="[['FBmLTmS', 'Tc'], ['FTcLTmS', 'Bm'], ['FTcBmTmS', 'L'], ['FTcBmLS', 'Tm'], ['FTcBmLTm', 'S'], ['BmLTmS', 'FTc'], ['FTcTmS', 'BmL'], ['\
+FTcLTm', 'BmS'], ['FTcBmS', 'LTm'], ['FTcBmL', 'TmS'], ['LTmS', 'FTcBm'], ['BmLS', 'FTcTm'], ['FTcTm', 'BmLS'], ['FTcBm', 'LTmS'], ['\
+TmS', 'FTcBmL'], ['LTm', 'FTcBmS'], ['BmS', 'FTcLTm'], ['BmL', 'FTcTmS'], ['FTc', 'BmLTmS'], ['S', 'FTcBmLTm'], ['Tm', 'FTcBmLS'], ['\
+L', 'FTcBmTmS'], ['Bm', 'FTcLTmS'], ['Tc', 'FBmLTmS']]",
+		level=6,
+		parts="{'Tm', 'L', 'F', 'Tc', 'S', 'Bm'}"];
+	FTcTpBmLTmS -- FTcBmLTmS	[anded=True];
+	FTpBmLTmS	[anded_pairs="[['FBmLTmS', 'Tp'], ['FTpLTmS', 'Bm'], ['FTpBmTmS', 'L'], ['FTpBmLS', 'Tm'], ['FTpBmLTm', 'S'], ['BmLTmS', 'FTp'], ['FTpTmS', 'BmL'], ['\
+FTpLTm', 'BmS'], ['FTpBmS', 'LTm'], ['FTpBmL', 'TmS'], ['LTmS', 'FTpBm'], ['BmLS', 'FTpTm'], ['FTpTm', 'BmLS'], ['FTpBm', 'LTmS'], ['\
+TmS', 'FTpBmL'], ['LTm', 'FTpBmS'], ['BmS', 'FTpLTm'], ['BmL', 'FTpTmS'], ['FTp', 'BmLTmS'], ['S', 'FTpBmLTm'], ['Tm', 'FTpBmLS'], ['\
+L', 'FTpBmTmS'], ['Bm', 'FTpLTmS'], ['Tp', 'FBmLTmS']]",
+		level=6,
+		parts="{'Tm', 'L', 'F', 'Tp', 'S', 'Bm'}"];
+	FTcTpBmLTmS -- FTpBmLTmS	[anded=True];
+	FTcTpBmL	[anded_pairs="[['FTpBmL', 'Tc'], ['FTcBmL', 'Tp'], ['FTcTpBm', 'L'], ['FTcTp', 'BmL'], ['BmL', 'FTcTp'], ['L', 'FTcTpBm'], ['Tp', 'FTcBmL'], ['\
+Tc', 'FTpBmL']]",
+		level=5,
+		parts="{'L', 'F', 'Tp', 'Tc', 'Bm'}"];
+	FTcTpBmLTmS -- FTcTpBmL	[anded=True];
+	FTcTpBmS	[anded_pairs="[['FTpBmS', 'Tc'], ['FTcBmS', 'Tp'], ['FTcTpBm', 'S'], ['FTcTp', 'BmS'], ['BmS', 'FTcTp'], ['S', 'FTcTpBm'], ['Tp', 'FTcBmS'], ['\
+Tc', 'FTpBmS']]",
+		level=5,
+		parts="{'F', 'Tp', 'S', 'Tc', 'Bm'}"];
+	FTcTpBmLTmS -- FTcTpBmS	[anded=True];
+	FTcTpLTm	[anded_pairs="[['FTpLTm', 'Tc'], ['FTcLTm', 'Tp'], ['FTcTpTm', 'L'], ['FTcTp', 'LTm'], ['LTm', 'FTcTp'], ['L', 'FTcTpTm'], ['Tp', 'FTcLTm'], ['\
+Tc', 'FTpLTm']]",
+		level=5,
+		parts="{'Tm', 'L', 'F', 'Tp', 'Tc'}"];
+	FTcTpBmLTmS -- FTcTpLTm	[anded=True];
+	FTcTpTmS	[anded_pairs="[['FTpTmS', 'Tc'], ['FTcTmS', 'Tp'], ['FTcTpTm', 'S'], ['FTcTp', 'TmS'], ['TmS', 'FTcTp'], ['S', 'FTcTpTm'], ['Tp', 'FTcTmS'], ['\
+Tc', 'FTpTmS']]",
+		level=5,
+		parts="{'Tm', 'F', 'Tp', 'S', 'Tc'}"];
+	FTcTpBmLTmS -- FTcTpTmS	[anded=True];
+	FTcTpBm	[anded_pairs="[['FTpBm', 'Tc'], ['FTcBm', 'Tp'], ['FTcTp', 'Bm'], ['Bm', 'FTcTp'], ['Tp', 'FTcBm'], ['Tc', 'FTpBm']]",
+		level=4,
+		parts="{'Bm', 'Tp', 'Tc', 'F'}"];
+	FTcTpBmLTmS -- FTcTpBm	[anded=True];
+	FTcTpTm	[anded_pairs="[['FTpTm', 'Tc'], ['FTcTm', 'Tp'], ['FTcTp', 'Tm'], ['Tm', 'FTcTp'], ['Tp', 'FTcTm'], ['Tc', 'FTpTm']]",
+		level=4,
+		parts="{'Tm', 'Tp', 'Tc', 'F'}"];
+	FTcTpBmLTmS -- FTcTpTm	[anded=True];
+	BmLTmS	[anded_pairs="[['LTmS', 'Bm'], ['BmTmS', 'L'], ['BmLS', 'Tm'], ['BmLTm', 'S'], ['TmS', 'BmL'], ['LTm', 'BmS'], ['BmS', 'LTm'], ['BmL', 'TmS'], ['\
+S', 'BmLTm'], ['Tm', 'BmLS'], ['L', 'BmTmS'], ['Bm', 'LTmS']]",
+		level=4,
+		parts="{'Tm', 'L', 'Bm', 'S'}"];
+	FTcTpBmLTmS -- BmLTmS	[anded=True];
+	FTcTp	[anded_pairs="[['FTp', 'Tc'], ['FTc', 'Tp'], ['Tp', 'FTc'], ['Tc', 'FTp']]",
+		level=3,
+		parts="{'Tp', 'Tc', 'F'}"];
+	FTcTpBmLTmS -- FTcTp	[anded=True];
+	BmLS	[anded_pairs="[['BmS', 'L'], ['BmL', 'S'], ['S', 'BmL'], ['L', 'BmS']]",
+		level=3,
+		parts="{'L', 'Bm', 'S'}"];
+	FTcTpBmLTmS -- BmLS	[anded=True];
+	LTmS	[anded_pairs="[['TmS', 'L'], ['LTm', 'S'], ['S', 'LTm'], ['L', 'TmS']]",
+		level=3,
+		parts="{'Tm', 'L', 'S'}"];
+	FTcTpBmLTmS -- LTmS	[anded=True];
+	BmL	[anded_pairs="[['L', 'Bm'], ['Bm', 'L']]",
+		level=2,
+		parts="{'L', 'Bm'}"];
+	FTcTpBmLTmS -- BmL	[anded=True];
+	BmS	[anded_pairs="[['S', 'Bm'], ['Bm', 'S']]",
+		level=2,
+		parts="{'Bm', 'S'}"];
+	FTcTpBmLTmS -- BmS	[anded=True];
+	LTm	[anded_pairs="[['Tm', 'L'], ['L', 'Tm']]",
+		level=2,
+		parts="{'Tm', 'L'}"];
+	FTcTpBmLTmS -- LTm	[anded=True];
+	TmS	[anded_pairs="[['S', 'Tm'], ['Tm', 'S']]",
+		level=2,
+		parts="{'Tm', 'S'}"];
+	FTcTpBmLTmS -- TmS	[anded=True];
+	Tc	[anded_pairs="[]",
+		level=1,
+		parts="{'Tc'}"];
+	FTcTpBmLTmS -- Tc	[anded=True];
+	Tp	[anded_pairs="[]",
+		level=1,
+		parts="{'Tp'}"];
+	FTcTpBmLTmS -- Tp	[anded=True];
+	Bm	[anded_pairs="[]",
+		level=1,
+		parts="{'Bm'}"];
+	FTcTpBmLTmS -- Bm	[anded=True];
+	L	[anded_pairs="[]",
+		level=1,
+		parts="{'L'}"];
+	FTcTpBmLTmS -- L	[anded=True];
+	Tm	[anded_pairs="[]",
+		level=1,
+		parts="{'Tm'}"];
+	FTcTpBmLTmS -- Tm	[anded=True];
+	S	[anded_pairs="[]",
+		level=1,
+		parts="{'S'}"];
+	FTcTpBmLTmS -- S	[anded=True];
+	FTcTpBmLTm -- FTcTpBmL	[anded=True];
+	FTcTpBmTm	[anded_pairs="[['FTpBmTm', 'Tc'], ['FTcBmTm', 'Tp'], ['FTcTpTm', 'Bm'], ['FTcTpBm', 'Tm'], ['Tm', 'FTcTpBm'], ['Bm', 'FTcTpTm'], ['Tp', 'FTcBmTm'], ['\
+Tc', 'FTpBmTm']]",
+		level=5,
+		parts="{'Tm', 'F', 'Tp', 'Tc', 'Bm'}"];
+	FTcTpBmLTm -- FTcTpBmTm	[anded=True];
+	FTcTpBmLTm -- FTcTpLTm	[anded=True];
+	FTcBmLTm	[anded_pairs="[['FBmLTm', 'Tc'], ['FTcLTm', 'Bm'], ['FTcBmTm', 'L'], ['FTcBmL', 'Tm'], ['BmLTm', 'FTc'], ['FTcTm', 'BmL'], ['FTcBm', 'LTm'], ['\
+LTm', 'FTcBm'], ['BmL', 'FTcTm'], ['FTc', 'BmLTm'], ['Tm', 'FTcBmL'], ['L', 'FTcBmTm'], ['Bm', 'FTcLTm'], ['Tc', 'FBmLTm']]",
+		level=5,
+		parts="{'Tm', 'L', 'F', 'Tc', 'Bm'}"];
+	FTcTpBmLTm -- FTcBmLTm	[anded=True];
+	FTpBmLTm	[anded_pairs="[['FBmLTm', 'Tp'], ['FTpLTm', 'Bm'], ['FTpBmTm', 'L'], ['FTpBmL', 'Tm'], ['BmLTm', 'FTp'], ['FTpTm', 'BmL'], ['FTpBm', 'LTm'], ['\
+LTm', 'FTpBm'], ['BmL', 'FTpTm'], ['FTp', 'BmLTm'], ['Tm', 'FTpBmL'], ['L', 'FTpBmTm'], ['Bm', 'FTpLTm'], ['Tp', 'FBmLTm']]",
+		level=5,
+		parts="{'Tm', 'L', 'F', 'Tp', 'Bm'}"];
+	FTcTpBmLTm -- FTpBmLTm	[anded=True];
+	FTcTpBmLTm -- FTcTpBm	[anded=True];
+	FTcTpBmLTm -- FTcTpTm	[anded=True];
+	FTcTpBmLTm -- FTcTp	[anded=True];
+	BmLTm	[anded_pairs="[['LTm', 'Bm'], ['BmL', 'Tm'], ['Tm', 'BmL'], ['Bm', 'LTm']]",
+		level=3,
+		parts="{'Tm', 'L', 'Bm'}"];
+	FTcTpBmLTm -- BmLTm	[anded=True];
+	FTcTpBmLTm -- BmL	[anded=True];
+	FTcTpBmLTm -- LTm	[anded=True];
+	FTcTpBmLTm -- Tc	[anded=True];
+	FTcTpBmLTm -- Tp	[anded=True];
+	FTcTpBmLTm -- Bm	[anded=True];
+	FTcTpBmLTm -- L	[anded=True];
+	FTcTpBmLTm -- Tm	[anded=True];
+	FTcTpBmLS -- FTcTpBmL	[anded=True];
+	FTcTpBmLS -- FTcTpBmS	[anded=True];
+	FTcBmLS	[anded_pairs="[['FBmLS', 'Tc'], ['FTcBmS', 'L'], ['FTcBmL', 'S'], ['BmLS', 'FTc'], ['FTc', 'BmLS'], ['S', 'FTcBmL'], ['L', 'FTcBmS'], ['Tc', '\
+FBmLS']]",
+		level=5,
+		parts="{'L', 'F', 'S', 'Tc', 'Bm'}"];
+	FTcTpBmLS -- FTcBmLS	[anded=True];
+	FTpBmLS	[anded_pairs="[['FBmLS', 'Tp'], ['FTpBmS', 'L'], ['FTpBmL', 'S'], ['BmLS', 'FTp'], ['FTp', 'BmLS'], ['S', 'FTpBmL'], ['L', 'FTpBmS'], ['Tp', '\
+FBmLS']]",
+		level=5,
+		parts="{'L', 'F', 'Tp', 'S', 'Bm'}"];
+	FTcTpBmLS -- FTpBmLS	[anded=True];
+	FTcTpBmLS -- FTcTp	[anded=True];
+	FTcTpBmLS -- BmLS	[anded=True];
+	FTcTpBmLS -- Tc	[anded=True];
+	FTcTpBmLS -- Tp	[anded=True];
+	FTcTpBmLS -- L	[anded=True];
+	FTcTpBmLS -- S	[anded=True];
+	FTcTpBmTmS -- FTcTpBmTm	[anded=True];
+	FTcTpBmTmS -- FTcTpBmS	[anded=True];
+	FTcTpBmTmS -- FTcTpTmS	[anded=True];
+	FTcBmTmS	[anded_pairs="[['FBmTmS', 'Tc'], ['FTcTmS', 'Bm'], ['FTcBmS', 'Tm'], ['FTcBmTm', 'S'], ['BmTmS', 'FTc'], ['FTcTm', 'BmS'], ['FTcBm', 'TmS'], ['\
+TmS', 'FTcBm'], ['BmS', 'FTcTm'], ['FTc', 'BmTmS'], ['S', 'FTcBmTm'], ['Tm', 'FTcBmS'], ['Bm', 'FTcTmS'], ['Tc', 'FBmTmS']]",
+		level=5,
+		parts="{'Tm', 'F', 'S', 'Tc', 'Bm'}"];
+	FTcTpBmTmS -- FTcBmTmS	[anded=True];
+	FTpBmTmS	[anded_pairs="[['FBmTmS', 'Tp'], ['FTpTmS', 'Bm'], ['FTpBmS', 'Tm'], ['FTpBmTm', 'S'], ['BmTmS', 'FTp'], ['FTpTm', 'BmS'], ['FTpBm', 'TmS'], ['\
+TmS', 'FTpBm'], ['BmS', 'FTpTm'], ['FTp', 'BmTmS'], ['S', 'FTpBmTm'], ['Tm', 'FTpBmS'], ['Bm', 'FTpTmS'], ['Tp', 'FBmTmS']]",
+		level=5,
+		parts="{'Tm', 'F', 'Tp', 'S', 'Bm'}"];
+	FTcTpBmTmS -- FTpBmTmS	[anded=True];
+	FTcTpBmTmS -- FTcTpBm	[anded=True];
+	FTcTpBmTmS -- FTcTpTm	[anded=True];
+	FTcTpBmTmS -- FTcTp	[anded=True];
+	BmTmS	[anded_pairs="[['TmS', 'Bm'], ['BmS', 'Tm'], ['Tm', 'BmS'], ['Bm', 'TmS']]",
+		level=3,
+		parts="{'Tm', 'Bm', 'S'}"];
+	FTcTpBmTmS -- BmTmS	[anded=True];
+	FTcTpBmTmS -- BmS	[anded=True];
+	FTcTpBmTmS -- TmS	[anded=True];
+	FTcTpBmTmS -- Tc	[anded=True];
+	FTcTpBmTmS -- Tp	[anded=True];
+	FTcTpBmTmS -- Bm	[anded=True];
+	FTcTpBmTmS -- Tm	[anded=True];
+	FTcTpBmTmS -- S	[anded=True];
+	FTcTpLTmS -- FTcTpLTm	[anded=True];
+	FTcTpLTmS -- FTcTpTmS	[anded=True];
+	FTcLTmS	[anded_pairs="[['FLTmS', 'Tc'], ['FTcTmS', 'L'], ['FTcLTm', 'S'], ['LTmS', 'FTc'], ['FTc', 'LTmS'], ['S', 'FTcLTm'], ['L', 'FTcTmS'], ['Tc', '\
+FLTmS']]",
+		level=5,
+		parts="{'Tm', 'L', 'F', 'S', 'Tc'}"];
+	FTcTpLTmS -- FTcLTmS	[anded=True];
+	FTpLTmS	[anded_pairs="[['FLTmS', 'Tp'], ['FTpTmS', 'L'], ['FTpLTm', 'S'], ['LTmS', 'FTp'], ['FTp', 'LTmS'], ['S', 'FTpLTm'], ['L', 'FTpTmS'], ['Tp', '\
+FLTmS']]",
+		level=5,
+		parts="{'Tm', 'L', 'F', 'Tp', 'S'}"];
+	FTcTpLTmS -- FTpLTmS	[anded=True];
+	FTcTpLTmS -- FTcTp	[anded=True];
+	FTcTpLTmS -- LTmS	[anded=True];
+	FTcTpLTmS -- Tc	[anded=True];
+	FTcTpLTmS -- Tp	[anded=True];
+	FTcTpLTmS -- L	[anded=True];
+	FTcTpLTmS -- S	[anded=True];
+	FTcBmLTmS -- FTcBmLTm	[anded=True];
+	FTcBmLTmS -- FTcBmLS	[anded=True];
+	FTcBmLTmS -- FTcBmTmS	[anded=True];
+	FTcBmLTmS -- FTcLTmS	[anded=True];
+	FBmLTmS	[anded_pairs="[['BmLTmS', 'F'], ['FLTmS', 'Bm'], ['FBmTmS', 'L'], ['FBmLS', 'Tm'], ['FBmLTm', 'S'], ['LTmS', 'FBm'], ['BmLS', 'FTm'], ['FTmS', '\
+BmL'], ['FLTm', 'BmS'], ['FBmS', 'LTm'], ['FBmL', 'TmS'], ['TmS', 'FBmL'], ['LTm', 'FBmS'], ['BmS', 'FLTm'], ['BmL', 'FTmS'], ['\
+FTm', 'BmLS'], ['FBm', 'LTmS'], ['S', 'FBmLTm'], ['Tm', 'FBmLS'], ['L', 'FBmTmS'], ['Bm', 'FLTmS'], ['F', 'BmLTmS']]",
+		level=5,
+		parts="{'Tm', 'L', 'F', 'S', 'Bm'}"];
+	FTcBmLTmS -- FBmLTmS	[anded=True];
+	FTcBmL	[anded_pairs="[['FBmL', 'Tc'], ['FTcBm', 'L'], ['BmL', 'FTc'], ['FTc', 'BmL'], ['L', 'FTcBm'], ['Tc', 'FBmL']]",
+		level=4,
+		parts="{'L', 'Bm', 'Tc', 'F'}"];
+	FTcBmLTmS -- FTcBmL	[anded=True];
+	FTcBmS	[anded_pairs="[['FBmS', 'Tc'], ['FTcBm', 'S'], ['BmS', 'FTc'], ['FTc', 'BmS'], ['S', 'FTcBm'], ['Tc', 'FBmS']]",
+		level=4,
+		parts="{'S', 'Bm', 'Tc', 'F'}"];
+	FTcBmLTmS -- FTcBmS	[anded=True];
+	FTcLTm	[anded_pairs="[['FLTm', 'Tc'], ['FTcTm', 'L'], ['LTm', 'FTc'], ['FTc', 'LTm'], ['L', 'FTcTm'], ['Tc', 'FLTm']]",
+		level=4,
+		parts="{'Tm', 'L', 'Tc', 'F'}"];
+	FTcBmLTmS -- FTcLTm	[anded=True];
+	FTcTmS	[anded_pairs="[['FTmS', 'Tc'], ['FTcTm', 'S'], ['TmS', 'FTc'], ['FTc', 'TmS'], ['S', 'FTcTm'], ['Tc', 'FTmS']]",
+		level=4,
+		parts="{'Tm', 'S', 'Tc', 'F'}"];
+	FTcBmLTmS -- FTcTmS	[anded=True];
+	FTcBmLTmS -- BmLTmS	[anded=True];
+	FTcBm	[anded_pairs="[['FBm', 'Tc'], ['FTc', 'Bm'], ['Bm', 'FTc'], ['Tc', 'FBm']]",
+		level=3,
+		parts="{'Bm', 'Tc', 'F'}"];
+	FTcBmLTmS -- FTcBm	[anded=True];
+	FTcTm	[anded_pairs="[['FTm', 'Tc'], ['FTc', 'Tm'], ['Tm', 'FTc'], ['Tc', 'FTm']]",
+		level=3,
+		parts="{'Tm', 'Tc', 'F'}"];
+	FTcBmLTmS -- FTcTm	[anded=True];
+	FTcBmLTmS -- BmLS	[anded=True];
+	FTcBmLTmS -- LTmS	[anded=True];
+	FTc	[anded_pairs="[['Tc', 'F'], ['F', 'Tc']]",
+		level=2,
+		parts="{'Tc', 'F'}"];
+	FTcBmLTmS -- FTc	[anded=True];
+	FTcBmLTmS -- BmL	[anded=True];
+	FTcBmLTmS -- BmS	[anded=True];
+	FTcBmLTmS -- LTm	[anded=True];
+	FTcBmLTmS -- TmS	[anded=True];
+	FTcBmLTmS -- Tc	[anded=True];
+	FTcBmLTmS -- Bm	[anded=True];
+	FTcBmLTmS -- L	[anded=True];
+	FTcBmLTmS -- Tm	[anded=True];
+	FTcBmLTmS -- S	[anded=True];
+	FTpBmLTmS -- FTpBmLTm	[anded=True];
+	FTpBmLTmS -- FTpBmLS	[anded=True];
+	FTpBmLTmS -- FTpBmTmS	[anded=True];
+	FTpBmLTmS -- FTpLTmS	[anded=True];
+	FTpBmLTmS -- FBmLTmS	[anded=True];
+	FTpBmL	[anded_pairs="[['FBmL', 'Tp'], ['FTpBm', 'L'], ['BmL', 'FTp'], ['FTp', 'BmL'], ['L', 'FTpBm'], ['Tp', 'FBmL']]",
+		level=4,
+		parts="{'L', 'Bm', 'Tp', 'F'}"];
+	FTpBmLTmS -- FTpBmL	[anded=True];
+	FTpBmS	[anded_pairs="[['FBmS', 'Tp'], ['FTpBm', 'S'], ['BmS', 'FTp'], ['FTp', 'BmS'], ['S', 'FTpBm'], ['Tp', 'FBmS']]",
+		level=4,
+		parts="{'Bm', 'Tp', 'S', 'F'}"];
+	FTpBmLTmS -- FTpBmS	[anded=True];
+	FTpLTm	[anded_pairs="[['FLTm', 'Tp'], ['FTpTm', 'L'], ['LTm', 'FTp'], ['FTp', 'LTm'], ['L', 'FTpTm'], ['Tp', 'FLTm']]",
+		level=4,
+		parts="{'Tm', 'L', 'Tp', 'F'}"];
+	FTpBmLTmS -- FTpLTm	[anded=True];
+	FTpTmS	[anded_pairs="[['FTmS', 'Tp'], ['FTpTm', 'S'], ['TmS', 'FTp'], ['FTp', 'TmS'], ['S', 'FTpTm'], ['Tp', 'FTmS']]",
+		level=4,
+		parts="{'Tm', 'Tp', 'S', 'F'}"];
+	FTpBmLTmS -- FTpTmS	[anded=True];
+	FTpBmLTmS -- BmLTmS	[anded=True];
+	FTpBm	[anded_pairs="[['FBm', 'Tp'], ['FTp', 'Bm'], ['Bm', 'FTp'], ['Tp', 'FBm']]",
+		level=3,
+		parts="{'Bm', 'Tp', 'F'}"];
+	FTpBmLTmS -- FTpBm	[anded=True];
+	FTpTm	[anded_pairs="[['FTm', 'Tp'], ['FTp', 'Tm'], ['Tm', 'FTp'], ['Tp', 'FTm']]",
+		level=3,
+		parts="{'Tm', 'Tp', 'F'}"];
+	FTpBmLTmS -- FTpTm	[anded=True];
+	FTpBmLTmS -- BmLS	[anded=True];
+	FTpBmLTmS -- LTmS	[anded=True];
+	FTp	[anded_pairs="[['Tp', 'F'], ['F', 'Tp']]",
+		level=2,
+		parts="{'Tp', 'F'}"];
+	FTpBmLTmS -- FTp	[anded=True];
+	FTpBmLTmS -- BmL	[anded=True];
+	FTpBmLTmS -- BmS	[anded=True];
+	FTpBmLTmS -- LTm	[anded=True];
+	FTpBmLTmS -- TmS	[anded=True];
+	FTpBmLTmS -- Tp	[anded=True];
+	FTpBmLTmS -- Bm	[anded=True];
+	FTpBmLTmS -- L	[anded=True];
+	FTpBmLTmS -- Tm	[anded=True];
+	FTpBmLTmS -- S	[anded=True];
+	FTcTpBmL -- FTcTpBm	[anded=True];
+	FTcTpBmL -- FTcBmL	[anded=True];
+	FTcTpBmL -- FTpBmL	[anded=True];
+	FTcTpBmL -- FTcTp	[anded=True];
+	FTcTpBmL -- BmL	[anded=True];
+	FTcTpBmL -- Tc	[anded=True];
+	FTcTpBmL -- Tp	[anded=True];
+	FTcTpBmL -- L	[anded=True];
+	FTcTpBmTm -- FTcTpBm	[anded=True];
+	FTcTpBmTm -- FTcTpTm	[anded=True];
+	FTcBmTm	[anded_pairs="[['FBmTm', 'Tc'], ['FTcTm', 'Bm'], ['FTcBm', 'Tm'], ['Tm', 'FTcBm'], ['Bm', 'FTcTm'], ['Tc', 'FBmTm']]",
+		level=4,
+		parts="{'Tm', 'Bm', 'Tc', 'F'}"];
+	FTcTpBmTm -- FTcBmTm	[anded=True];
+	FTpBmTm	[anded_pairs="[['FBmTm', 'Tp'], ['FTpTm', 'Bm'], ['FTpBm', 'Tm'], ['Tm', 'FTpBm'], ['Bm', 'FTpTm'], ['Tp', 'FBmTm']]",
+		level=4,
+		parts="{'Tm', 'Bm', 'Tp', 'F'}"];
+	FTcTpBmTm -- FTpBmTm	[anded=True];
+	FTcTpBmTm -- Tc	[anded=True];
+	FTcTpBmTm -- Tp	[anded=True];
+	FTcTpBmTm -- Bm	[anded=True];
+	FTcTpBmTm -- Tm	[anded=True];
+	FTcTpBmS -- FTcTpBm	[anded=True];
+	FTcTpBmS -- FTcBmS	[anded=True];
+	FTcTpBmS -- FTpBmS	[anded=True];
+	FTcTpBmS -- FTcTp	[anded=True];
+	FTcTpBmS -- BmS	[anded=True];
+	FTcTpBmS -- Tc	[anded=True];
+	FTcTpBmS -- Tp	[anded=True];
+	FTcTpBmS -- S	[anded=True];
+	FTcTpLTm -- FTcTpTm	[anded=True];
+	FTcTpLTm -- FTcLTm	[anded=True];
+	FTcTpLTm -- FTpLTm	[anded=True];
+	FTcTpLTm -- FTcTp	[anded=True];
+	FTcTpLTm -- LTm	[anded=True];
+	FTcTpLTm -- Tc	[anded=True];
+	FTcTpLTm -- Tp	[anded=True];
+	FTcTpLTm -- L	[anded=True];
+	FTcTpTmS -- FTcTpTm	[anded=True];
+	FTcTpTmS -- FTcTmS	[anded=True];
+	FTcTpTmS -- FTpTmS	[anded=True];
+	FTcTpTmS -- FTcTp	[anded=True];
+	FTcTpTmS -- TmS	[anded=True];
+	FTcTpTmS -- Tc	[anded=True];
+	FTcTpTmS -- Tp	[anded=True];
+	FTcTpTmS -- S	[anded=True];
+	FTcBmLTm -- FTcBmL	[anded=True];
+	FTcBmLTm -- FTcBmTm	[anded=True];
+	FTcBmLTm -- FTcLTm	[anded=True];
+	FBmLTm	[anded_pairs="[['BmLTm', 'F'], ['FLTm', 'Bm'], ['FBmTm', 'L'], ['FBmL', 'Tm'], ['LTm', 'FBm'], ['BmL', 'FTm'], ['FTm', 'BmL'], ['FBm', 'LTm'], ['\
+Tm', 'FBmL'], ['L', 'FBmTm'], ['Bm', 'FLTm'], ['F', 'BmLTm']]",
+		level=4,
+		parts="{'Tm', 'L', 'Bm', 'F'}"];
+	FTcBmLTm -- FBmLTm	[anded=True];
+	FTcBmLTm -- FTcBm	[anded=True];
+	FTcBmLTm -- FTcTm	[anded=True];
+	FTcBmLTm -- BmLTm	[anded=True];
+	FTcBmLTm -- FTc	[anded=True];
+	FTcBmLTm -- BmL	[anded=True];
+	FTcBmLTm -- LTm	[anded=True];
+	FTcBmLTm -- Tc	[anded=True];
+	FTcBmLTm -- Bm	[anded=True];
+	FTcBmLTm -- L	[anded=True];
+	FTcBmLTm -- Tm	[anded=True];
+	FTcBmLS -- FTcBmL	[anded=True];
+	FTcBmLS -- FTcBmS	[anded=True];
+	FBmLS	[anded_pairs="[['BmLS', 'F'], ['FBmS', 'L'], ['FBmL', 'S'], ['S', 'FBmL'], ['L', 'FBmS'], ['F', 'BmLS']]",
+		level=4,
+		parts="{'L', 'Bm', 'S', 'F'}"];
+	FTcBmLS -- FBmLS	[anded=True];
+	FTcBmLS -- BmLS	[anded=True];
+	FTcBmLS -- FTc	[anded=True];
+	FTcBmLS -- Tc	[anded=True];
+	FTcBmLS -- L	[anded=True];
+	FTcBmLS -- S	[anded=True];
+	FTcBmTmS -- FTcBmTm	[anded=True];
+	FTcBmTmS -- FTcBmS	[anded=True];
+	FTcBmTmS -- FTcTmS	[anded=True];
+	FBmTmS	[anded_pairs="[['BmTmS', 'F'], ['FTmS', 'Bm'], ['FBmS', 'Tm'], ['FBmTm', 'S'], ['TmS', 'FBm'], ['BmS', 'FTm'], ['FTm', 'BmS'], ['FBm', 'TmS'], ['\
+S', 'FBmTm'], ['Tm', 'FBmS'], ['Bm', 'FTmS'], ['F', 'BmTmS']]",
+		level=4,
+		parts="{'Tm', 'Bm', 'S', 'F'}"];
+	FTcBmTmS -- FBmTmS	[anded=True];
+	FTcBmTmS -- FTcBm	[anded=True];
+	FTcBmTmS -- FTcTm	[anded=True];
+	FTcBmTmS -- BmTmS	[anded=True];
+	FTcBmTmS -- FTc	[anded=True];
+	FTcBmTmS -- BmS	[anded=True];
+	FTcBmTmS -- TmS	[anded=True];
+	FTcBmTmS -- Tc	[anded=True];
+	FTcBmTmS -- Bm	[anded=True];
+	FTcBmTmS -- Tm	[anded=True];
+	FTcBmTmS -- S	[anded=True];
+	FTcLTmS -- FTcLTm	[anded=True];
+	FTcLTmS -- FTcTmS	[anded=True];
+	FLTmS	[anded_pairs="[['LTmS', 'F'], ['FTmS', 'L'], ['FLTm', 'S'], ['S', 'FLTm'], ['L', 'FTmS'], ['F', 'LTmS']]",
+		level=4,
+		parts="{'Tm', 'L', 'S', 'F'}"];
+	FTcLTmS -- FLTmS	[anded=True];
+	FTcLTmS -- LTmS	[anded=True];
+	FTcLTmS -- FTc	[anded=True];
+	FTcLTmS -- Tc	[anded=True];
+	FTcLTmS -- L	[anded=True];
+	FTcLTmS -- S	[anded=True];
+	FTpBmLTm -- FTpBmL	[anded=True];
+	FTpBmLTm -- FTpBmTm	[anded=True];
+	FTpBmLTm -- FTpLTm	[anded=True];
+	FTpBmLTm -- FBmLTm	[anded=True];
+	FTpBmLTm -- FTpBm	[anded=True];
+	FTpBmLTm -- FTpTm	[anded=True];
+	FTpBmLTm -- BmLTm	[anded=True];
+	FTpBmLTm -- FTp	[anded=True];
+	FTpBmLTm -- BmL	[anded=True];
+	FTpBmLTm -- LTm	[anded=True];
+	FTpBmLTm -- Tp	[anded=True];
+	FTpBmLTm -- Bm	[anded=True];
+	FTpBmLTm -- L	[anded=True];
+	FTpBmLTm -- Tm	[anded=True];
+	FTpBmLS -- FTpBmL	[anded=True];
+	FTpBmLS -- FTpBmS	[anded=True];
+	FTpBmLS -- FBmLS	[anded=True];
+	FTpBmLS -- BmLS	[anded=True];
+	FTpBmLS -- FTp	[anded=True];
+	FTpBmLS -- Tp	[anded=True];
+	FTpBmLS -- L	[anded=True];
+	FTpBmLS -- S	[anded=True];
+	FTpBmTmS -- FTpBmTm	[anded=True];
+	FTpBmTmS -- FTpBmS	[anded=True];
+	FTpBmTmS -- FTpTmS	[anded=True];
+	FTpBmTmS -- FBmTmS	[anded=True];
+	FTpBmTmS -- FTpBm	[anded=True];
+	FTpBmTmS -- FTpTm	[anded=True];
+	FTpBmTmS -- BmTmS	[anded=True];
+	FTpBmTmS -- FTp	[anded=True];
+	FTpBmTmS -- BmS	[anded=True];
+	FTpBmTmS -- TmS	[anded=True];
+	FTpBmTmS -- Tp	[anded=True];
+	FTpBmTmS -- Bm	[anded=True];
+	FTpBmTmS -- Tm	[anded=True];
+	FTpBmTmS -- S	[anded=True];
+	FTpLTmS -- FTpLTm	[anded=True];
+	FTpLTmS -- FTpTmS	[anded=True];
+	FTpLTmS -- FLTmS	[anded=True];
+	FTpLTmS -- LTmS	[anded=True];
+	FTpLTmS -- FTp	[anded=True];
+	FTpLTmS -- Tp	[anded=True];
+	FTpLTmS -- L	[anded=True];
+	FTpLTmS -- S	[anded=True];
+	FBmLTmS -- FBmLTm	[anded=True];
+	FBmLTmS -- FBmLS	[anded=True];
+	FBmLTmS -- FBmTmS	[anded=True];
+	FBmLTmS -- FLTmS	[anded=True];
+	FBmLTmS -- BmLTmS	[anded=True];
+	FBmL	[anded_pairs="[['BmL', 'F'], ['FBm', 'L'], ['L', 'FBm'], ['F', 'BmL']]",
+		level=3,
+		parts="{'L', 'Bm', 'F'}"];
+	FBmLTmS -- FBmL	[anded=True];
+	FBmS	[anded_pairs="[['BmS', 'F'], ['FBm', 'S'], ['S', 'FBm'], ['F', 'BmS']]",
+		level=3,
+		parts="{'Bm', 'S', 'F'}"];
+	FBmLTmS -- FBmS	[anded=True];
+	FLTm	[anded_pairs="[['LTm', 'F'], ['FTm', 'L'], ['L', 'FTm'], ['F', 'LTm']]",
+		level=3,
+		parts="{'Tm', 'L', 'F'}"];
+	FBmLTmS -- FLTm	[anded=True];
+	FTmS	[anded_pairs="[['TmS', 'F'], ['FTm', 'S'], ['S', 'FTm'], ['F', 'TmS']]",
+		level=3,
+		parts="{'Tm', 'S', 'F'}"];
+	FBmLTmS -- FTmS	[anded=True];
+	FBmLTmS -- BmLS	[anded=True];
+	FBmLTmS -- LTmS	[anded=True];
+	FBm	[anded_pairs="[['Bm', 'F'], ['F', 'Bm']]",
+		level=2,
+		parts="{'Bm', 'F'}"];
+	FBmLTmS -- FBm	[anded=True];
+	FTm	[anded_pairs="[['Tm', 'F'], ['F', 'Tm']]",
+		level=2,
+		parts="{'Tm', 'F'}"];
+	FBmLTmS -- FTm	[anded=True];
+	FBmLTmS -- BmL	[anded=True];
+	FBmLTmS -- BmS	[anded=True];
+	FBmLTmS -- LTm	[anded=True];
+	FBmLTmS -- TmS	[anded=True];
+	F	[anded_pairs="[]",
+		level=1,
+		parts="{'F'}"];
+	FBmLTmS -- F	[anded=True];
+	FBmLTmS -- Bm	[anded=True];
+	FBmLTmS -- L	[anded=True];
+	FBmLTmS -- Tm	[anded=True];
+	FBmLTmS -- S	[anded=True];
+	FTcTpBm -- FTcTp	[anded=True];
+	FTcTpBm -- FTcBm	[anded=True];
+	FTcTpBm -- FTpBm	[anded=True];
+	FTcTpBm -- Tc	[anded=True];
+	FTcTpBm -- Tp	[anded=True];
+	FTcTpBm -- Bm	[anded=True];
+	FTcTpTm -- FTcTp	[anded=True];
+	FTcTpTm -- FTcTm	[anded=True];
+	FTcTpTm -- FTpTm	[anded=True];
+	FTcTpTm -- Tc	[anded=True];
+	FTcTpTm -- Tp	[anded=True];
+	FTcTpTm -- Tm	[anded=True];
+	FTcBmL -- FTcBm	[anded=True];
+	FTcBmL -- FBmL	[anded=True];
+	FTcBmL -- FTc	[anded=True];
+	FTcBmL -- BmL	[anded=True];
+	FTcBmL -- Tc	[anded=True];
+	FTcBmL -- L	[anded=True];
+	FTcBmTm -- FTcBm	[anded=True];
+	FTcBmTm -- FTcTm	[anded=True];
+	FBmTm	[anded_pairs="[['FTm', 'Bm'], ['FBm', 'Tm'], ['Tm', 'FBm'], ['Bm', 'FTm']]",
+		level=3,
+		parts="{'Tm', 'Bm', 'F'}"];
+	FTcBmTm -- FBmTm	[anded=True];
+	FTcBmTm -- Tc	[anded=True];
+	FTcBmTm -- Bm	[anded=True];
+	FTcBmTm -- Tm	[anded=True];
+	FTcBmS -- FTcBm	[anded=True];
+	FTcBmS -- FBmS	[anded=True];
+	FTcBmS -- FTc	[anded=True];
+	FTcBmS -- BmS	[anded=True];
+	FTcBmS -- Tc	[anded=True];
+	FTcBmS -- S	[anded=True];
+	FTcLTm -- FTcTm	[anded=True];
+	FTcLTm -- FLTm	[anded=True];
+	FTcLTm -- FTc	[anded=True];
+	FTcLTm -- LTm	[anded=True];
+	FTcLTm -- Tc	[anded=True];
+	FTcLTm -- L	[anded=True];
+	FTcTmS -- FTcTm	[anded=True];
+	FTcTmS -- FTmS	[anded=True];
+	FTcTmS -- FTc	[anded=True];
+	FTcTmS -- TmS	[anded=True];
+	FTcTmS -- Tc	[anded=True];
+	FTcTmS -- S	[anded=True];
+	FTpBmL -- FTpBm	[anded=True];
+	FTpBmL -- FBmL	[anded=True];
+	FTpBmL -- FTp	[anded=True];
+	FTpBmL -- BmL	[anded=True];
+	FTpBmL -- Tp	[anded=True];
+	FTpBmL -- L	[anded=True];
+	FTpBmTm -- FTpBm	[anded=True];
+	FTpBmTm -- FTpTm	[anded=True];
+	FTpBmTm -- FBmTm	[anded=True];
+	FTpBmTm -- Tp	[anded=True];
+	FTpBmTm -- Bm	[anded=True];
+	FTpBmTm -- Tm	[anded=True];
+	FTpBmS -- FTpBm	[anded=True];
+	FTpBmS -- FBmS	[anded=True];
+	FTpBmS -- FTp	[anded=True];
+	FTpBmS -- BmS	[anded=True];
+	FTpBmS -- Tp	[anded=True];
+	FTpBmS -- S	[anded=True];
+	FTpLTm -- FTpTm	[anded=True];
+	FTpLTm -- FLTm	[anded=True];
+	FTpLTm -- FTp	[anded=True];
+	FTpLTm -- LTm	[anded=True];
+	FTpLTm -- Tp	[anded=True];
+	FTpLTm -- L	[anded=True];
+	FTpTmS -- FTpTm	[anded=True];
+	FTpTmS -- FTmS	[anded=True];
+	FTpTmS -- FTp	[anded=True];
+	FTpTmS -- TmS	[anded=True];
+	FTpTmS -- Tp	[anded=True];
+	FTpTmS -- S	[anded=True];
+	FBmLTm -- FBmL	[anded=True];
+	FBmLTm -- FBmTm	[anded=True];
+	FBmLTm -- FLTm	[anded=True];
+	FBmLTm -- BmLTm	[anded=True];
+	FBmLTm -- FBm	[anded=True];
+	FBmLTm -- FTm	[anded=True];
+	FBmLTm -- BmL	[anded=True];
+	FBmLTm -- LTm	[anded=True];
+	FBmLTm -- F	[anded=True];
+	FBmLTm -- Bm	[anded=True];
+	FBmLTm -- L	[anded=True];
+	FBmLTm -- Tm	[anded=True];
+	FBmLS -- FBmL	[anded=True];
+	FBmLS -- FBmS	[anded=True];
+	FBmLS -- BmLS	[anded=True];
+	FBmLS -- F	[anded=True];
+	FBmLS -- L	[anded=True];
+	FBmLS -- S	[anded=True];
+	FBmTmS -- FBmTm	[anded=True];
+	FBmTmS -- FBmS	[anded=True];
+	FBmTmS -- FTmS	[anded=True];
+	FBmTmS -- BmTmS	[anded=True];
+	FBmTmS -- FBm	[anded=True];
+	FBmTmS -- FTm	[anded=True];
+	FBmTmS -- BmS	[anded=True];
+	FBmTmS -- TmS	[anded=True];
+	FBmTmS -- F	[anded=True];
+	FBmTmS -- Bm	[anded=True];
+	FBmTmS -- Tm	[anded=True];
+	FBmTmS -- S	[anded=True];
+	FLTmS -- FLTm	[anded=True];
+	FLTmS -- FTmS	[anded=True];
+	FLTmS -- LTmS	[anded=True];
+	FLTmS -- F	[anded=True];
+	FLTmS -- L	[anded=True];
+	FLTmS -- S	[anded=True];
+	BmLTmS -- BmLTm	[anded=True];
+	BmLTmS -- BmLS	[anded=True];
+	BmLTmS -- BmTmS	[anded=True];
+	BmLTmS -- LTmS	[anded=True];
+	BmLTmS -- BmL	[anded=True];
+	BmLTmS -- BmS	[anded=True];
+	BmLTmS -- LTm	[anded=True];
+	BmLTmS -- TmS	[anded=True];
+	BmLTmS -- Bm	[anded=True];
+	BmLTmS -- L	[anded=True];
+	BmLTmS -- Tm	[anded=True];
+	BmLTmS -- S	[anded=True];
+	FTcTp -- FTc	[anded=True];
+	FTcTp -- FTp	[anded=True];
+	FTcTp -- Tc	[anded=True];
+	FTcTp -- Tp	[anded=True];
+	FTcBm -- FTc	[anded=True];
+	FTcBm -- FBm	[anded=True];
+	FTcBm -- Tc	[anded=True];
+	FTcBm -- Bm	[anded=True];
+	FTcTm -- FTc	[anded=True];
+	FTcTm -- FTm	[anded=True];
+	FTcTm -- Tc	[anded=True];
+	FTcTm -- Tm	[anded=True];
+	FTpBm -- FTp	[anded=True];
+	FTpBm -- FBm	[anded=True];
+	FTpBm -- Tp	[anded=True];
+	FTpBm -- Bm	[anded=True];
+	FTpTm -- FTp	[anded=True];
+	FTpTm -- FTm	[anded=True];
+	FTpTm -- Tp	[anded=True];
+	FTpTm -- Tm	[anded=True];
+	FBmL -- FBm	[anded=True];
+	FBmL -- BmL	[anded=True];
+	FBmL -- F	[anded=True];
+	FBmL -- L	[anded=True];
+	FBmTm -- FBm	[anded=True];
+	FBmTm -- FTm	[anded=True];
+	FBmTm -- Bm	[anded=True];
+	FBmTm -- Tm	[anded=True];
+	FBmS -- FBm	[anded=True];
+	FBmS -- BmS	[anded=True];
+	FBmS -- F	[anded=True];
+	FBmS -- S	[anded=True];
+	FLTm -- FTm	[anded=True];
+	FLTm -- LTm	[anded=True];
+	FLTm -- F	[anded=True];
+	FLTm -- L	[anded=True];
+	FTmS -- FTm	[anded=True];
+	FTmS -- TmS	[anded=True];
+	FTmS -- F	[anded=True];
+	FTmS -- S	[anded=True];
+	BmLTm -- BmL	[anded=True];
+	BmLTm -- LTm	[anded=True];
+	BmLTm -- Bm	[anded=True];
+	BmLTm -- Tm	[anded=True];
+	BmLS -- BmL	[anded=True];
+	BmLS -- BmS	[anded=True];
+	BmLS -- L	[anded=True];
+	BmLS -- S	[anded=True];
+	BmTmS -- BmS	[anded=True];
+	BmTmS -- TmS	[anded=True];
+	BmTmS -- Bm	[anded=True];
+	BmTmS -- Tm	[anded=True];
+	LTmS -- LTm	[anded=True];
+	LTmS -- TmS	[anded=True];
+	LTmS -- L	[anded=True];
+	LTmS -- S	[anded=True];
+	FTc -- F	[anded=True];
+	FTc -- Tc	[anded=True];
+	FTp -- F	[anded=True];
+	FTp -- Tp	[anded=True];
+	FBm -- F	[anded=True];
+	FBm -- Bm	[anded=True];
+	FTm -- F	[anded=True];
+	FTm -- Tm	[anded=True];
+	BmL -- Bm	[anded=True];
+	BmL -- L	[anded=True];
+	BmS -- Bm	[anded=True];
+	BmS -- S	[anded=True];
+	LTm -- L	[anded=True];
+	LTm -- Tm	[anded=True];
+	TmS -- Tm	[anded=True];
+	TmS -- S	[anded=True];
+	Bc	[anded_pairs="[]",
+		level=1,
+		parts="{'Bc'}"];
 }
